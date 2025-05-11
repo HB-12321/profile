@@ -62,30 +62,47 @@
   </div>
 
   <!-- Projects -->
-  <<section id="projects" class="section card projects">
+  <section id="projects" class="section card projects">
   <h2>Projects</h2>
   <div class="project-grid">
-    <div class="project-item">
-      <!-- Utilise une image locale pour être sûr qu'elle charge -->
-      <img src="images/carbontrack.png"
-           alt="Screenshot CarbonTrack"
-           class="project-img">
-
-      <div class="project-overlay">
-        <h3>CarbonTrack</h3>
-        <p>Estimate CO₂ of your Google Workspace usage.</p>
-        <!-- Bouton stylé -->
-        <a href="https://www.carbontrack.eu"
-           target="_blank"
-           rel="noopener"
-           class="project-btn">
+    <!-- CarbonTrack sans image -->
+    <div class="project-item simple">
+      <div class="project-info">
+        <h3>
+          <a href="https://www.carbontrack.eu" target="_blank" rel="noopener">
+            CarbonTrack
+          </a>
+        </h3>
+        <p>
+          Estimate CO₂ emissions linked to your Google Workspace usage with public emission factors.
+        </p>
+        <ul>
+          <li>Emails: ~4g CO₂e per email</li>
+          <li>Meetings: ~0.2kg CO₂e per hour</li>
+        </ul>
+        <a
+          href="https://www.carbontrack.eu"
+          target="_blank"
+          rel="noopener"
+          class="project-btn"
+        >
           Voir le projet →
         </a>
       </div>
     </div>
-    <!-- Duplique .project-item pour ajouter d'autres projets -->
+
+    <!-- Exemple d’autre projet (avec image) -->
+    <div class="project-item">
+      <img src="images/autreprojet.png" alt="Autre Projet" class="project-img">
+      <div class="project-overlay">
+        <h3>AutreProjet</h3>
+        <p>Description rapide de l’autre projet.</p>
+        <a href="#" class="project-btn">Voir →</a>
+      </div>
+    </div>
   </div>
 </section>
+
 
   <!-- Contact -->
   <section id="contact" class="section card text-center contact">
