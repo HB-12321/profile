@@ -4,73 +4,101 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Houtman Bachar</title>
-  <meta name="description" content="Houtman Bachar Portfolio - Front End Developer">
+  <meta name="description" content="Portfolio de Houtman Bachar – Développeur Front-End">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Sticky Navigation -->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">HB</div>
-    <nav class="nav-links">
+    <nav>
       <a href="#hero">Home</a>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
     <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight">Houtman Bachar</span></h1>
-      <p>Front-End Developer & Business Strategist</p>
-      <a href="#projects" class="btn">See My Work</a>
+      <h1 class="gradient-text">Hello, I’m <span>Houtman Bachar</span></h1>
+      <a href="#projects" class="btn">Voir mes projets</a>
+    </div>
+    <!-- floating shapes -->
+    <div class="shape shape--circle"></div>
+    <div class="shape shape--triangle"></div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 100"><path d="M0,0 C400,100 800,0 1440,100 L1440,0 L0,0 Z" fill="var(--bg)"/></svg>
+  </div>
+
+  <!-- About (Timeline) -->
+  <section id="about" class="section card timeline">
+    <h2>About Me</h2>
+    <ul>
+      <li>
+        <span class="date">2023 – Today</span>
+        <p>Customer Success Officer @ OneDoc SA</p>
+      </li>
+      <li>
+        <span class="date">2020 & 2024</span>
+        <p>Transition to Web Dev via LeWagon & FreeCodeCamp.</p>
+      </li>
+      <li>
+        <span class="date">2017 – 2020</span>
+        <p>Master International Business Strategy — IAE Nancy.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section card skills">
+    <h2>Technical Skills</h2>
+    <div class="skill-bar" data-skill="HTML/CSS" data-level="90%"></div>
+    <div class="skill-bar" data-skill="JavaScript" data-level="80%"></div>
+    <div class="skill-bar" data-skill="Ruby/Rails" data-level="70%"></div>
+    <div class="skill-bar" data-skill="Git/GitHub" data-level="85%"></div>
+  </section>
+
+  <!-- Wave Divider Invert -->
+  <div class="wave-divider invert">
+    <svg viewBox="0 0 1440 100"><path d="M0,100 C400,0 800,100 1440,0 L1440,100 L0,100 Z" fill="var(--bg)"/></svg>
+  </div>
+
+  <!-- Projects -->
+  <section id="projects" class="section card projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-item">
+        <img src="https://carbontrack.eu/assets/hero.jpg" alt="CarbonTrack">
+        <div class="project-overlay">
+          <h3>CarbonTrack</h3>
+          <p>Estimate CO₂ of your Google Workspace usage.</p>
+          <a href="https://www.carbontrack.eu" target="_blank">Voir le projet →</a>
+        </div>
+      </div>
+      <!-- dupliquer .project-item ici pour d'autres projets -->
     </div>
   </section>
 
-  <main class="scroll-snap-container">
-    <!-- About Me -->
-    <section id="about" class="card section">
-      <h2>About Me</h2>
-      <p>
-        I am a driven and adaptable professional with a background in international business and a growing passion for web development. Currently working as a Customer Success Officer, I combine strong client-facing skills with a deep interest in technology. My transition into web development is fueled by hands-on training and a desire to build impactful, user-focused digital experiences. I thrive in collaborative environments and am excited to bring my dual expertise—business strategy and tech—to the modern web.
-      </p>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="card section">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-item">
-          <div class="project-image" style="background-image:url('https://carbontrack.eu/assets/hero.jpg')"></div>
-          <div class="project-info">
-            <h3>
-              <a href="https://www.carbontrack.eu" target="_blank" rel="noopener">
-                CarbonTrack
-              </a>
-            </h3>
-            <p>Estimate CO₂ emissions of your Google Workspace usage with public emission factors.</p>
-            <ul>
-              <li>Emails: ~4g CO₂e/email</li>
-              <li>Meetings: ~0.2kg CO₂e/hour</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Add more .project-item here -->
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="card section text-center">
-      <h2>Get in Touch</h2>
-      <p>Connect with me on LinkedIn:</p>
-      <a href="https://www.linkedin.com/in/houtmanbachar/" target="_blank" rel="noopener">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-logo">
+  <!-- Contact -->
+  <section id="contact" class="section card text-center contact">
+    <h2>Contact</h2>
+    <p>Connect with me on LinkedIn :</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/houtmanbachar/" target="_blank" aria-label="LinkedIn">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
       </a>
-    </section>
-  </main>
+      <!-- ajouter d'autres icônes si besoin -->
+    </div>
+  </section>
 
   <footer class="footer text-center">
     <p>&copy; 2025 Houtman Bachar. All rights reserved.</p>

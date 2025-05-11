@@ -1,47 +1,41 @@
-// Theme toggle
-const toggleBtn = document.getElementById('theme-toggle');
-toggleBtn.addEventListener('click', () => {
-  const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', theme);
-  toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+// Theme Toggle
+const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('click', () => {
+  const t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+  toggle.textContent = t === 'dark' ? '☀️' : '🌙';
 });
 
-// Smooth scroll for nav links & CTA
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(anchor.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-// Reveal on scroll
+// Reveal & animate skill bars on scroll
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      if (e.target.classList.contains('skill-bar')) {
+        const lvl = e.target.getAttribute('data-level');
+        e.target.querySelector('::after');
+        e.target.style.setProperty('--fill', lvl);
+        e.target.querySelector(':after');
+        e.target.style.setProperty('--fill', lvl);
+        // fallback: modify pseudo via a small hack
+        const style = document.createElement('style');
+        style.innerHTML = `.skills .skill-bar[data-skill="${e.target.dataset.skill}"]::after { width: ${lvl}; }`;
+        document.head.appendChild(style);
+      }
+      observer.unobserve(e.target);
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.3 });
 
-document.querySelectorAll('.section, .project-item').forEach(el => {
+document.querySelectorAll('.section, .project-item, .skill-bar').forEach(el => {
   el.classList.add('hidden');
   observer.observe(el);
 });
 
-// Typing effect on Hero
-const highlight = document.querySelector('.highlight');
-const texts = ["Houtman Bachar", "Front-End Developer", "Business Strategist"];
-let index = 0, charIndex = 0, direction = 1;
-function type() {
-  const fullText = texts[index];
-  highlight.textContent = fullText.slice(0, charIndex);
-  charIndex += direction;
-  if (charIndex > fullText.length || charIndex < 0) {
-    direction *= -1;
-    if (direction === 1) index = (index + 1) % texts.length;
-  }
-  setTimeout(type, 150);
-}
-type();
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior:'smooth' });
+  });
+});
