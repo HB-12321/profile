@@ -1,88 +1,79 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Houtman Bachar</title>
-    <meta name="description" content="Houtman Bachar Portfolio - Front End Developer">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Houtman Bachar</title>
+  <meta name="description" content="Houtman Bachar Portfolio - Front End Developer">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Sticky Navigation -->
+  <header class="navbar">
+    <div class="logo">HB</div>
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+  </header>
 
-      <!-- Header Card -->
-      <div class="card text-center">
-        <h1>Houtman Bachar</h1>
-        <img
-          class="img-circle"
-          src="https://media.licdn.com/dms/image/v2/D4E03AQGTa4Cn7sq_hw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1693292259846?e=1749081600&v=beta&t=OpoKEsFkjT85P6RPeIt7nRmXfkdlcLRxZEXjUYhzO6c"
-          alt="Profile picture"
-        >
-      </div>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Houtman Bachar</span></h1>
+      <p>Front-End Developer & Business Strategist</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
 
-      <!-- About Me -->
-      <div class="card">
-        <h2 class="text-center">About Me</h2>
-        <p>
-          I am a driven and adaptable professional with a background in international business and a growing passion for web development. Currently working as a Customer Success Officer, I combine strong client-facing skills with a deep interest in technology. My transition into web development is fueled by hands-on training and a desire to build impactful, user-focused digital experiences. I thrive in collaborative environments and am excited to bring my dual expertise—business strategy and tech—to the modern web.
-        </p>
-      </div>
+  <main class="scroll-snap-container">
+    <!-- About Me -->
+    <section id="about" class="card section">
+      <h2>About Me</h2>
+      <p>
+        I am a driven and adaptable professional with a background in international business and a growing passion for web development. Currently working as a Customer Success Officer, I combine strong client-facing skills with a deep interest in technology. My transition into web development is fueled by hands-on training and a desire to build impactful, user-focused digital experiences. I thrive in collaborative environments and am excited to bring my dual expertise—business strategy and tech—to the modern web.
+      </p>
+    </section>
 
-      <!-- Projects -->
-      <div class="card">
-        <h2 class="text-center">Projects</h2>
-        <div class="project-grid">
-          <div class="project-item">
+    <!-- Projects -->
+    <section id="projects" class="card section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <div class="project-image" style="background-image:url('https://carbontrack.eu/assets/hero.jpg')"></div>
+          <div class="project-info">
             <h3>
               <a href="https://www.carbontrack.eu" target="_blank" rel="noopener">
                 CarbonTrack
               </a>
             </h3>
-            <p>CarbonTrack helps you estimate the CO₂ emissions linked to your Google Workspace usage. It uses public emission factors to approximate the environmental impact of your emails and video meetings.</p>
+            <p>Estimate CO₂ emissions of your Google Workspace usage with public emission factors.</p>
             <ul>
-              <li>Emails: ~4g CO₂e per email sent/received</li>
-              <li>Meetings: ~0.2kg CO₂e per hour of video call</li>
+              <li>Emails: ~4g CO₂e/email</li>
+              <li>Meetings: ~0.2kg CO₂e/hour</li>
             </ul>
           </div>
         </div>
+        <!-- Add more .project-item here -->
       </div>
+    </section>
 
-      <!-- Education -->
-      <div class="card">
-        <h2 class="text-center">Education</h2>
-        <ul>
-          <li><strong>Le Wagon</strong> – Web Development Bootcamp</li>
-          <li><strong>FreeCodeCamp</strong> – Responsive Web Design Certification</li>
-          <li><strong>IAE Nancy</strong> – Master's Degree in International Business Strategy (2017–2020)</li>
-          <li><strong>University of Lorraine</strong> – Bachelor in International Trade (2016–2017)</li>
-          <li><strong>Lycée Robert Schuman</strong> – BTS in International Trade (2014–2016)</li>
-        </ul>
-      </div>
+    <!-- Contact -->
+    <section id="contact" class="card section text-center">
+      <h2>Get in Touch</h2>
+      <p>Connect with me on LinkedIn:</p>
+      <a href="https://www.linkedin.com/in/houtmanbachar/" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-logo">
+      </a>
+    </section>
+  </main>
 
-      <!-- Technical Skills -->
-      <div class="card">
-        <h2 class="text-center">Technical Skills</h2>
-        <p>HTML, CSS, SQL, Git, GitHub, Ruby, Ruby on Rails, JavaScript</p>
-      </div>
-
-      <!-- Languages -->
-      <div class="card">
-        <h2 class="text-center">Languages</h2>
-        <p>French – C1 | English – C2 | Italian – C1</p>
-      </div>
-
-      <!-- Contact -->
-      <div class="card text-center">
-        <p>Connect with me on LinkedIn:</p>
-        <a href="https://www.linkedin.com/in/houtmanbachar/" target="_blank" rel="noopener">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-            alt="LinkedIn"
-            class="linkedin-logo"
-          >
-        </a>
-      </div>
-
-    </div>
-  </body>
+  <footer class="footer text-center">
+    <p>&copy; 2025 Houtman Bachar. All rights reserved.</p>
+  </footer>
+</body>
 </html>
