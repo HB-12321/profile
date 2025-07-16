@@ -3,128 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Houtman Bachar – Portfolio</title>
-  <meta name="description" content="Portfolio de Houtman Bachar – Développeur Front-End">
+  <title>Houtman's Portfolio</title>
+  <meta name="description" content="Houtman's Portfolio – Fullstack Developer">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
+  <video autoplay muted loop id="bg-video">
+    <source src="images/background.mp4" type="video/mp4">
+  </video>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">HB</div>
-    <nav>
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-    </nav>
-    <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="gradient-text">
-        Hello, I’m <span>Houtman</span>
-      </h1>
-      <p>Fullstack Developer</p>
-      <a href="#projects" class="btn">View My Projects</a>
+  <div class="content">
+    <div class="greeting" id="greeting">
     </div>
-    <div class="shape shape--circle"></div>
-    <div class="shape shape--triangle"></div>
-  </section>
 
-  <!-- Wave Divider -->
-  <div class="wave-divider">
-    <svg viewBox="0 0 1440 100">
-      <path d="M0,0 C400,100 800,0 1440,100 L1440,0 L0,0 Z" fill="var(--bg)"/>
-    </svg>
-  </div>
 
-  <!-- About Section -->
-  <section id="about" class="section card timeline">
-    <h2>About Me</h2>
-    <p>
-      I am a driven and adaptable professional with a background in international business
-      and a growing passion for web development. Currently working as a Customer Success
-      Officer, I combine strong client-facing skills with a deep interest in technology.
-      My transition into web development is fueled by hands-on training and a desire to
-      build impactful, user-focused digital experiences. I thrive in collaborative
-      environments and am excited to bring my dual expertise—business strategy and tech—
-      to the modern web.
-    </p>
-  </section>
+    <section class="presentation">
+      <div class="presentation-content">
+        <p class="title">Fullstack Developer</p>
+        <p class="description">
+          International business professional transitioning to web development.
+          Combining client-facing expertise with technical skills to build impactful
+          digital experiences.
+        </p>
+      </div>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section card skills">
-    <h2>Technical Skills</h2>
-    <div class="skill-bar" data-skill="HTML/CSS" data-level="100%"></div>
-    <div class="skill-bar" data-skill="JavaScript" data-level="100%"></div>
-    <div class="skill-bar" data-skill="Ruby/Rails" data-level="100%"></div>
-    <div class="skill-bar" data-skill="Git/GitHub" data-level="100%"></div>
-  </section>
+    <section class="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML/CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Ruby/Rails</div>
+        <div class="skill">Git/GitHub</div>
+      </div>
+    </section>
 
-  <!-- Inverted Wave Divider -->
-  <div class="wave-divider invert">
-    <svg viewBox="0 0 1440 100">
-      <path d="M0,100 C400,0 800,100 1440,0 L1440,100 L0,100 Z" fill="var(--bg)"/>
-    </svg>
-  </div>
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
 
-  <!-- Projects Section -->
-  <section id="projects" class="section card projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <!-- CarbonTrack (no image) -->
-      <div class="project-item simple">
-        <div class="project-info">
-          <h3>
-            <a href="https://www.carbontrack.eu" target="_blank" rel="noopener">
-              CarbonTrack
-            </a>
-          </h3>
-          <p>
-            Estimate CO₂ emissions linked to your Google Workspace usage with public
-            emission factors.
-          </p>
-          <ul>
-            <li>Emails: ~4g CO₂e per email</li>
-            <li>Meetings: ~0.2kg CO₂e per hour</li>
-          </ul>
-          <a href="https://www.carbontrack.eu" target="_blank" rel="noopener" class="project-btn">
-            Check the project →
-          </a>
+        <div class="e-card">
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="infotop">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+              <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862Z"></path>
+            </svg>
+            <div class="project-title">CarbonTrack</div>
+            <div class="project-desc">CO₂ emissions calculator</div>
+            <a href="https://www.carbontrack.eu" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <div class="e-card">
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="infotop">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+              <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+              <path fill="currentColor" d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path>
+            </svg>
+            <div class="project-title">SkillRadar</div>
+            <div class="project-desc">Real-time insights on the top in‑demand tech skills in your city.</div>
+            <a href="https://www.skillradar.me" target="_blank" class="project-link">View Project</a>
+          </div>
         </div>
       </div>
-      <!-- Example for another project with image:
-      <div class="project-item">
-        <img src="images/autreprojet.png" alt="Autre Projet" class="project-img">
-        <div class="project-overlay">
-          <h3>AutreProjet</h3>
-          <p>Description rapide de l’autre projet.</p>
-          <a href="#" class="project-btn">Voir →</a>
-        </div>
-      </div>
-      -->
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section card text-center contact">
-    <h2>LinkedIn</h2>
-    <div class="social-icons">
+    <div class="contact">
       <a href="https://www.linkedin.com/in/houtmanbachar/" target="_blank" aria-label="LinkedIn">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
       </a>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer text-center">
-    <p>&copy; 2025 Houtman Bachar. All rights reserved.</p>
-  </footer>
+  <script>
+    const messages = [
+      'Hello, I am <span class="name">Houtman</span>.',
+      'Bonjour, je suis <span class="name">Houtman</span>.',
+      'Hola, soy <span class="name">Houtman</span>.',
+      'Hallo, ich bin <span class="name">Houtman</span>.',
+      'Ciao, sono <span class="name">Houtman</span>.',
+    ];
 
+    const container = document.getElementById('greeting');
+    let index = 0;
+
+    function rotateGreeting() {
+      container.innerHTML = messages[index];
+      index = (index + 1) % messages.length;
+    }
+
+    rotateGreeting();
+    setInterval(rotateGreeting, 3000);
+  </script>
 </body>
 </html>
